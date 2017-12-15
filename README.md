@@ -1,7 +1,8 @@
 ### Introduction
 ***RUN APP***
+```scala
 $ sbt run
-
+```
 Worker APP dependents on reactiveJobQueue App. Before run worker app compile and do publish local to reactiveJobQueue.
 
 ```bash
