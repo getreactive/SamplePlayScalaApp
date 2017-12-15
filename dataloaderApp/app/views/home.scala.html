@@ -1,0 +1,35 @@
+<md-toolbar md-colors="{background: 'blue-800'}">
+    <div class="md-toolbar-tools">
+        User Data Management
+    </div>
+</md-toolbar>
+<div id="mainView" ng-controller="MainappCtrl" flex>
+<md-content class="md-padding" layout-xs="column" layout="row" layout-align="center center">
+    <div flex-xs flex-gt-xs="40" layout="column" layout-align="center center">
+        <md-card class="card-40-center" md-theme='dark-blue' md-theme-watch>
+            <md-card-title>
+                <md-card-title-text>
+                    <span class="md-headline">Upload Data</span>
+                </md-card-title-text>
+            </md-card-title>
+            <md-card-content>
+             <input id='inputFile' class="drop-box" name="csvdata" type='file' />
+            </md-card-content>
+            <md-card-actions layout="row" layout-align="center">
+                <br>
+                <center>
+                    <md-button class="md-raised uploadButton" ng-click='upload($event)'>Upload</md-button>
+                </center>
+            </md-card-actions>
+            <md-card-footer>
+                <div ng-show="isLoading">
+                    <md-progress-linear id="fileupload-progressbar" class="md-warn" md-mode="determinate" value="{{uploadprogress}}"></md-progress-linear>
+                    <span>{{uploadprogress}} %</span>
+                </div>
+            </md-card-footer>
+
+        </md-card>
+    </div>
+</md-content>
+
+</div>

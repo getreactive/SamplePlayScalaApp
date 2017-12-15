@@ -1,0 +1,24 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(webJarAssets: WebJarAssets)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main(webJarAssets) {
+
+    @helper.form(action = routes.MainController.dataUploader, 'enctype -> "multipart/form-data") {
+
+        <input type="file" name="csvdata">
+
+        <p>
+            <input type="submit">
+        </p>
+
+    }
+
+}
